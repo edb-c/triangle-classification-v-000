@@ -7,20 +7,6 @@ class Triangle
     @side2 = side2
     @side3 = side3
   end
-=begin
-  def kind
-
-    check_triangle
-
-    if side1 == side2 && side2 == side3
-      :equilateral
-    elsif side1 == side2 || side2 == side3 || side1 == side3
-      :isosceles
-    else
-      :scalene
-    end
-  end
-=end  
 
  def kind
 
@@ -28,7 +14,6 @@ class Triangle
 
   case 
     when @side1 == @side2 && @side2 == @side3
-      
       return :equilateral
     when side1 == side2 || side2 == side3 || side1 == side3
       return :isosceles
@@ -48,4 +33,4 @@ class Triangle
   
 end
 
-Triangle.new(2, 2, 2).kind
+#Triangle.new(2, 2, 2).kind
