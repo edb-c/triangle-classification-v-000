@@ -7,7 +7,7 @@ class Triangle
     @side2 = side2
     @side3 = side3
   end
-
+=begin
   def kind
 
     check_triangle
@@ -20,8 +20,31 @@ class Triangle
       :scalene
     end
   end
+=end  
 
-   def check_triangle
+ def kind
+
+    check_triangle
+=begin
+    if side1 == side2 && side2 == side3
+      :equilateral
+    elsif side1 == side2 || side2 == side3 || side1 == side3
+      :isosceles
+    else
+      :scalene
+    end
+=end
+  case kind
+    when side1 == side2 && side2 == side3
+      :equilateral
+    when side1 == side2 || side2 == side3 || side1 == side3
+      :isosceles
+    else
+      :scalene   
+  end
+ end
+
+  def check_triangle
     real_triangle = [(side1 + side2 > side3), (side1 + side3 > side2), (side2 + side3 > side1)]
     [side1, side2, side3].each { |s| real_triangle << false if s <= 0 }
     raise TriangleError if real_triangle.include?(false)
