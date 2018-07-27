@@ -23,14 +23,12 @@ class Triangle
 =end  
 
  def kind
-  
-  check_triangle
-  
-  type_of_triangle = ""
-  
-  case type_of_triangle
 
+    check_triangle
+
+  case 
     when @side1 == @side2 && @side2 == @side3
+      
       return :equilateral
     when side1 == side2 || side2 == side3 || side1 == side3
       return :isosceles
@@ -49,3 +47,5 @@ class Triangle
   end
   
 end
+
+Triangle.new(2, 2, 2).kind
