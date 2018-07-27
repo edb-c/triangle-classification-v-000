@@ -23,9 +23,11 @@ class Triangle
 =end  
 
  def kind
-
-    check_triangle
+  
+  check_triangle
+  
   type_of_triangle = ""
+  
   case type_of_triangle
 
     when side1 == side2 && side2 == side3
