@@ -36,11 +36,11 @@ class Triangle
 =end
   case kind
     when side1 == side2 && side2 == side3
-      :equilateral
+      return :equilateral
     when side1 == side2 || side2 == side3 || side1 == side3
-      :isosceles
+      return :isosceles
     else
-      :scalene   
+      return :scalene   
   end
  end
 
