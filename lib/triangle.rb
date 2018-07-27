@@ -10,7 +10,7 @@ class Triangle
 
   def kind
 
-    validate_triangle
+    check_triangle
 
     if side1 == side2 && side2 == side3
       :equilateral
