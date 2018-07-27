@@ -30,7 +30,7 @@ class Triangle
   
   case type_of_triangle
 
-    when side1 == side2 && side2 == side3
+    when @side1 == @side2 && @side2 == @side3
       return :equilateral
     when side1 == side2 || side2 == side3 || side1 == side3
       return :isosceles
